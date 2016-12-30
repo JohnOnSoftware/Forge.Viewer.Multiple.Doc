@@ -28,9 +28,18 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         <title>Very Basic 3D Viewer</title>
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=no" />
         <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="main.css">
 
         <!-- The Viewer CSS -->
         <link rel="stylesheet" href="https://developer.api.autodesk.com/viewingservice/v1/viewers/style.min.css" type="text/css">
+
+        <!-- The Viewer JS -->
+        <script src="https://developer.api.autodesk.com/viewingservice/v1/viewers/three.min.js"></script>
+        <script src="https://developer.api.autodesk.com/viewingservice/v1/viewers/viewer3D.js"></script>
+        <!-- Developer JS -->
+        <script src="https://code.jquery.com/jquery-2.1.2.min.js"></script>
+        <script src="js/index.js"></script>
+
 
         <style>
             .my-view-front-button {
@@ -46,15 +55,28 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
     </head>
 
+
+
+
+
     <body>
-        <div id="viewer"></div>
-        <!-- The Viewer JS -->
-        <script src="https://developer.api.autodesk.com/viewingservice/v1/viewers/three.min.js"></script>
-        <script src="https://developer.api.autodesk.com/viewingservice/v1/viewers/viewer3D.js"></script>
-        <!-- Developer JS -->
-        <script src="https://code.jquery.com/jquery-2.1.2.min.js"></script>
-        <script src="js/extension.js"></script>
-        <script src="js/index.js"></script>
+    <div class="nav-bar">
+    <div class="nav-item"><img class src="./images/favicon.ico"></div>
+    <div class="page-title">Viewer with multiple models</div>
+    </div>
+    <div class="control-panel">
+    <div class="table-wrapper">
+        <div class="table-header">Models</div>
+        <div class="table-list"></div>
+    </div>
+    </div>
+    <div id="panelBtn" class="collapse-btn left-round-btn icon icon-angle-circled-left"></div>
+    <div id="saveBtn" class="collapse-btn left-round-btn icon icon-plus"></div>
+    <div class="viewer-panel">
+    <div id="viewer3D" class="viewer-box"></div>
+    </div>
     </body>
+
+
 </html>
 

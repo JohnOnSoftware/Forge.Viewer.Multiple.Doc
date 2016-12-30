@@ -23,7 +23,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
 var favicon = require('serve-favicon');
-var api = require('./routes/token.js');
+var api = require('./routes/api.js');
 var express = require('express');
 
 var app = express();
